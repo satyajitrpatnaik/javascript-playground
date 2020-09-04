@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/satyajitrpatnaik/javascript-playground/issues"
   },
-  "homepage": "https://github.com/satyajitrpatnaik/javascript-playground#readme"
+  "homepage": "https://github.com/satyajitrpatnaik/javascript-playground#readme",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
 }
