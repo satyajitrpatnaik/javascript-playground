@@ -1,0 +1,24 @@
+{
+  "name": "vanilla-redux",
+  "version": "1.0.0",
+  "description": "experiment redux in a vanilla javascript application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyajitrpatnaik/javascript-playground.git"
+  },
+  "keywords": [
+    "redux",
+    "javascript",
+    "vanilla"
+  ],
+  "author": "satyajitrpatnaik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyajitrpatnaik/javascript-playground/issues"
+  },
+  "homepage": "https://github.com/satyajitrpatnaik/javascript-playground#readme"
+}
