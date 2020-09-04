@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/satyajitrpatnaik/javascript-playground#readme",
   "dependencies": {
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6"
   }
 }

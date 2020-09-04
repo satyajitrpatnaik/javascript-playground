@@ -1,6 +1,10 @@
 const redux = require('redux');
+const reduxLogger = require('redux-logger');
+
 const createStore = redux.createStore;
 const combineReducers = redux.combineReducers;
+const logger = reduxLogger.createLogger();
+const applyMiddleware = redux.applyMiddleware;
 
 console.log('Logged from Index.js!');
 
@@ -18,7 +22,7 @@ const rootReducer = combineReducers({
 });
 
 // store
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 // Getting the current value of the rdux store using getState()
 console.log('Initially the redux store has value: ' + JSON.stringify(store.getState()));
