@@ -10,7 +10,7 @@ const IceCreamContainer = (props) => {
   return (
     <div>
       <h1>With Hook - useSelector() - from react-redux </h1>
-      <h2>Number of cakes - {numberOfIceCreams}</h2>
+      <h2>Number of ice creams - {numberOfIceCreams}</h2>
       <button onClick={() => dispatch(buyIceCream())}>Buy Ice Cream</button>
     </div>
   );

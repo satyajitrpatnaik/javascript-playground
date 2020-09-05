@@ -1,3 +1,3 @@
-const { default: IceCreamContainer } = require("./IceCreamContainer");
+import IceCreamContainer from './IceCreamContainer';
 
-export default  IceCreamContainer from './IceCreamContainer';
+export default IceCreamContainer;
