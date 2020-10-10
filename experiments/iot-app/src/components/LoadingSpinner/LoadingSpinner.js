@@ -5,7 +5,7 @@ import './styles.css';
 
 const LoadingSpinner = ({ open }) => {
   if (open) {
-    return <div className="backdrop"></div>
+    return <div data-test="component-loading-spinner" className="backdrop"></div>
   }
   return null;
 }
