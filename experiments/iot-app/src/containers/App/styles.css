@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 1000px;
+}
+
+.header {
+  border: 2px solid #202936;
+  border-radius: 30px;
+  padding: 5px 5px;
+}

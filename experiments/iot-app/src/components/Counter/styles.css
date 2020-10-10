@@ -1,0 +1,20 @@
+.counter {
+  border: 2px solid #202936;
+  border-radius: 30px;
+  margin-top: 20px;
+  height: 80px;
+  width: 1000px;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.counter-grid-item {
+  border: 2px solid black;
+  margin-top: 20px;
+}
