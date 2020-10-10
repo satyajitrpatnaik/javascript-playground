@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './styles.css';
 
@@ -7,6 +8,14 @@ const LoadingSpinner = ({ open }) => {
     return <div className="backdrop"></div>
   }
   return null;
+}
+
+LoadingSpinner.propTypes = {
+  open: PropTypes.bool.isRequired
+}
+
+LoadingSpinner.defaultProps = {
+  open: false
 }
 
 export default LoadingSpinner;

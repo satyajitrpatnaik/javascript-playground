@@ -30,12 +30,14 @@ const DeviceReadings = (props) => {
     <div className="device-readings">
       <LoadingSpinner open={loading}/>
       <ErrorModal message={errorMessage} handleClose={handleCloseModal}/>
-      <div className="input-div">
+      <div className="input-div" align="left">
         <label style={{ fontWeight: 'bold' }}>Search by Reading Name: </label>
         <input type="text" onChange={event => handleSearch(event.target.value)}/>
-        <label> <span className="green-dot"/> Active Device Readings </label>
-        <label> <span className="red-dot"/> Inactive Device Readings </label>
       </div>
+      <span style={{ float: 'right' }}>
+        <label> <span className="green-dot"/> Active Device Reading </label>
+        <label> <span className="red-dot"/> Inactive Device Reading </label>
+      </span>
       {
         deviceReadings.filter(reading => {
           return reading.name.toLowerCase()

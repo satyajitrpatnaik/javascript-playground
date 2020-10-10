@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './styles.css';
 
@@ -14,6 +15,18 @@ const ErrorModal = ({ message, handleClose }) => {
     );
   }
   return null;
+}
+
+ErrorModal.propTypes = {
+  message: PropTypes.string.isRequired,
+  handleClose: PropTypes.func.isRequired
+}
+
+ErrorModal.defaultProps = {
+  message: '',
+  handleClose: () => {
+    console.log('handler is missing.');
+  }
 }
 
 export default ErrorModal;

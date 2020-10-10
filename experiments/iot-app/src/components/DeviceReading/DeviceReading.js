@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { toggleDeviceReadingStatus } from '../../store';
 
@@ -25,7 +26,7 @@ const DeviceReading = (props) => {
         </div>
         <div className="grid-item">
           <label>Timestamp: </label>
-          <span>{props.data.timestamp}</span>
+          <span>{new Date(props.data.timestamp).toString()}</span>
         </div>
         <div className="grid-item">
           <label>Value: </label>
@@ -38,6 +39,26 @@ const DeviceReading = (props) => {
       </div>
     </div>
   );
+}
+
+DeviceReading.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
+    unit: PropTypes.string.isRequired,
+    timestamp: PropTypes.number.isRequired,
+    active: PropTypes.bool.isRequired
+  }).isRequired
+}
+
+DeviceReading.defaultProps = {
+  data: {
+    name: 'NA',
+    value: 0,
+    unit: 'NA',
+    timestamp: 0,
+    active: false
+  }
 }
 
 export default DeviceReading;
