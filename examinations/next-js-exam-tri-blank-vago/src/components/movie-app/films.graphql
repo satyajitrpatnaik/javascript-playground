@@ -1,0 +1,29 @@
+query getFilmDetails($after: String, $first: Int, $before: String, $last: Int) {
+  allFilms(after: $after, first: $first, before: $before, last: $last) {
+    totalCount
+    films {
+      title
+      episodeID
+      openingCrawl
+      director
+      producers
+      releaseDate
+      id
+      characterConnection {
+        characters {
+          name
+          birthYear
+          eyeColor
+          gender
+          hairColor
+          height
+          mass
+          skinColor
+          homeworld {
+           name 
+          }
+        }
+      }
+    }
+  }
+}

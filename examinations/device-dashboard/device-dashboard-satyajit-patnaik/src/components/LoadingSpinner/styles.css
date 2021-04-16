@@ -1,0 +1,37 @@
+.backdrop {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(53, 50, 50, 0.7);
+  z-index: 1000;
+  display: block;
+}
+
+.backdrop::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 40%;
+  border: 5px solid #8d8b8b;
+  border-radius: 50%;
+  border-top: 5px solid #1d1e1f;
+  width: 50px;
+  height: 50px;
+  animation: spin .5s linear infinite;
+  -webkit-animation: spin .5s linear infinite; /** Safari */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/** Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}

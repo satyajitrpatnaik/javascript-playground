@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1602452157363" clover="3.2.0">
+  <project timestamp="1602452157363" name="All files">
+    <metrics statements="128" coveredstatements="116" conditionals="33" coveredconditionals="27" methods="48" coveredmethods="43" elements="209" coveredelements="186" complexity="0" loc="128" ncloc="128" packages="11" files="15" classes="15"/>
+    <package name="src">
+      <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="index.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\index.js">
+        <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Counter">
+      <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="8" coveredmethods="8"/>
+      <file name="Counter.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\components\Counter\Counter.js">
+        <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="8" coveredmethods="8"/>
+        <line num="7" count="9" type="cond" truecount="3" falsecount="0"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="20" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="42" count="10" type="stmt"/>
+        <line num="43" count="8" type="stmt"/>
+        <line num="44" count="8" type="stmt"/>
+        <line num="47" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.DeviceReading">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="DeviceReading.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\components\DeviceReading\DeviceReading.js">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="58" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ErrorModal">
+      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="ErrorModal.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\components\ErrorModal\ErrorModal.js">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.LoadingSpinner">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="LoadingSpinner.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\components\LoadingSpinner\LoadingSpinner.js">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.containers.App">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="App.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\containers\App\App.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.containers.DeviceReadings">
+      <metrics statements="14" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="6"/>
+      <file name="DeviceReadings.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\containers\DeviceReadings\DeviceReadings.js">
+        <metrics statements="14" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="6"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+        <line num="16" count="14" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.store">
+      <metrics statements="10" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="configureStore.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\store\configureStore.js">
+        <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="10" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\store\index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="rootReducer.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\store\rootReducer.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.store.device">
+      <metrics statements="51" coveredstatements="51" conditionals="18" coveredconditionals="15" methods="18" coveredmethods="18"/>
+      <file name="actionCreators.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\store\device\actionCreators.js">
+        <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="15"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="43" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="53" count="5" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
+        <line num="66" count="5" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+      </file>
+      <file name="actionTypes.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\store\device\actionTypes.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+      </file>
+      <file name="deviceReducer.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\store\device\deviceReducer.js">
+        <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="13" methods="3" coveredmethods="3"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="9" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="67" type="cond" truecount="8" falsecount="0"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="cond" truecount="4" falsecount="1"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="65" count="49" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.test">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="testUtils.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\test\testUtils.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="24" type="stmt"/>
+        <line num="7" count="24" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="19" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="axiosInstance.js" path="C:\learn\relayr\Frontend JS Engineer_device-dashboard 2020_1\device-dashboard-satyajit-patnaik\src\utils\axiosInstance.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
