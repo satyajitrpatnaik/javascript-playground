@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new ReactRefreshWebpackPlugin(),
     new webpack.DefinePlugin({
-      "process.env.name": JSON.stringify("development"),
+      "process.env.name": JSON.stringify("dev environment"),
     }),
   ],
 };
