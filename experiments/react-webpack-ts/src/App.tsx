@@ -1,9 +1,10 @@
-import "./style.css";
-import IMAGE from "./react.png";
-import LOGO from "./react-svg.svg";
-import { ClickCounter } from "./ClickCounter";
+import './style.css'
+import IMAGE from './react.png'
+import LOGO from './react-svg.svg'
+import { ClickCounter } from './ClickCounter'
 
 export const App = () => {
+  const name = 'Satyajit'
   return (
     <>
       <h1>
@@ -13,5 +14,5 @@ export const App = () => {
       <img src={LOGO} alt="React logo" width="300" height="200" />
       <ClickCounter />
     </>
-  );
-};
+  )
+}
