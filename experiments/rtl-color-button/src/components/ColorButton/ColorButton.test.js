@@ -14,3 +14,27 @@ test("button turns blue when clicked", () => {
   expect(colorButton).toHaveStyle({ backgroundColor: "blue" });
   expect(colorButton.textContent).toBe("Change to RED");
 });
+
+test("initial conditions", () => {
+  render(<ColorButton />);
+  const colorButton = screen.getByRole("button", { name: "Change to BLUE" });
+  expect(colorButton).toBeEnabled();
+
+  const checkbox = screen.getByRole("checkbox");
+  expect(checkbox).not.toBeChecked();
+});
+
+test("Checkbox disables button on first click and enables on second click", () => {
+  render(<ColorButton />);
+  const colorButton = screen.getByRole("button");
+  const checkbox = screen.getByRole("checkbox", { name: "Disable Button" });
+  expect(colorButton).toBeEnabled();
+
+  fireEvent.click(checkbox);
+  expect(checkbox).toBeChecked();
+  expect(colorButton).toBeDisabled();
+
+  fireEvent.click(checkbox);
+  expect(checkbox).not.toBeChecked();
+  expect(colorButton).toBeEnabled();
+});
