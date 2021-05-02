@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../test-utils/testing-library-utils";
 import Options from "./Options";
 
 test("displays image for each scoop option from server", async () => {
@@ -20,5 +20,5 @@ test("displays image for each topping option from server", async () => {
 
   // conform alt text of images
   const altText = toppingImages.map((element) => element.alt);
-  expect(altText).toEqual(["M&Ms Topping", "Hot Fudge Topping"]);
+  expect(altText).toEqual(["M&Ms topping", "Hot fudge topping"]);
 });
