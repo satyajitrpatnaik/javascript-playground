@@ -1,0 +1,94 @@
+pipeline {
+  agent none
+
+	environment{
+		ARTIFACTORY_HOST="https://artifactory.wdc.com:6580" 
+		ARTIFACTORY_BASE_HOST="artifactory.wdc.com:6580"
+		ARTIFACTORY_CREDENTIAL="c757e597-b503-46fc-b2e8-285922859e00"
+		DEV_IMAGE_NAME = "common/dev/access-manager-client"
+		UAT_IMAGE_NAME = "common/uat/access-manager-client"
+		PRD_IMAGE_NAME = "common/prd/access-manager-client"
+	}
+
+	stages {
+		stage ('Build and Publish to DEV') {
+			agent { label 'astjs01' }
+			steps {
+				echo "======= Building Docker Image =============="
+				script {
+					def packageJson = readJSON file: 'access-manager-client/package.json'
+					env.artifactoryTag = packageJson.version
+					docker.withRegistry(ARTIFACTORY_HOST, ARTIFACTORY_CREDENTIAL) {
+						def dockerImage = docker.build("${ARTIFACTORY_BASE_HOST}/${DEV_IMAGE_NAME}:${env.artifactoryTag}.S${env.BUILD_NUMBER}",
+							' -f ./access-manager-client/Dockerfile ./access-manager-client')
+						dockerImage.push()
+					}
+				}
+			}
+		}
+
+		stage('Generate Build Info') {
+			agent { label 'astjs01' }
+			steps {
+				echo "Access Manager Client Docker Image: ${ARTIFACTORY_BASE_HOST}/${DEV_IMAGE_NAME}:${env.artifactoryTag}.S${env.BUILD_NUMBER}"
+			}
+		}/* 
+
+		stage ('Approve UAT Deployment') {
+			agent none
+			steps {
+				timeout(time:5, unit:'DAYS') {
+					input 'Proceed to UAT'
+				}
+			}
+		}
+
+		stage ('Tag Image to UAT') {
+			agent { label 'astjs01' }
+			steps {
+				sh "sudo docker tag ${ARTIFACTORY_BASE_HOST}/${DEV_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER} ${ARTIFACTORY_BASE_HOST}/${UAT_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER}"
+				rtDockerPush(
+					serverId: "wdc artifactory",
+					image: "${ARTIFACTORY_BASE_HOST}/${UAT_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER}",
+					targetRepo: 'pete-ast-galaxy-uls', // this is for galaxy repo, change this later
+					properties: 'project-name=galaxy;status=stable' // this is for galaxy repo, change this later
+				)
+				echo 'Successfully Tagged to UAT'
+			}
+		}
+
+		stage ('Approve PRD Deployment') {
+			agent none
+			steps {
+				timeout(time:5, unit:'DAYS') {
+					input 'Proceed to PRD'
+				}
+			}
+		}
+
+		stage ('Tag Image to PRD') {
+			agent { label 'astjs01' }
+			steps {
+				sh "sudo docker tag ${ARTIFACTORY_BASE_HOST}/${UAT_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER} ${ARTIFACTORY_BASE_HOST}/${PRD_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER}"
+				rtDockerPush(
+					serverId: "wdc artifactory",
+					image: "${ARTIFACTORY_BASE_HOST}/${PRD_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER}",
+					targetRepo: 'pete-ast-galaxy-uls', // this is for galaxy repo, change this later
+					properties: 'project-name=galaxy;status=stable' // this is for galaxy repo, change this later
+				)
+				echo 'Successfully Tagged to PRD'
+			}
+		} */
+
+		stage ('Clean up') {
+			agent { label 'astjs01' }
+			steps {
+				echo "Removing docker images created."
+				sh "sudo docker rmi --force ${ARTIFACTORY_BASE_HOST}/${DEV_IMAGE_NAME}:${env.artifactoryTag}.S${env.BUILD_NUMBER}"
+				/* sh "sudo docker rmi --force ${ARTIFACTORY_BASE_HOST}/${UAT_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER}"
+				sh "sudo docker rmi --force ${ARTIFACTORY_BASE_HOST}/${PRD_IMAGE_NAME}:${ARTIFACTORY_TAG}.S${env.BUILD_NUMBER}" */
+				echo "Successfully removed the docker images."
+			}
+		} 
+	}
+}
